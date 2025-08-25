@@ -9,8 +9,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5 [mask-image:linear-gradient(to_bottom,transparent,white_5%,white_95%,transparent)]"></div>
       
       <div className="container relative z-10 px-4 md:px-6">
-        <div className="max-w-4xl mx-auto text-center">
-            <Typewriter text="Anjuman ACM Student Chapter" className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400 justify-center" />
+        <div className="max-w-5xl mx-auto text-center">
+            <Typewriter text="Anjuman ACM Student Chapter" className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400 justify-center" />
           <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
