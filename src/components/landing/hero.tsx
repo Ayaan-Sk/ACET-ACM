@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { MotionDiv } from "./motion-div"
 import { ArrowRight } from "lucide-react"
+import { Typewriter } from "./typewriter"
 
 export default function Hero() {
   return (
@@ -9,15 +10,7 @@ export default function Hero() {
       
       <div className="container relative z-10 px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <MotionDiv
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-          >
-            <h1 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400">
-              Anjuman ACM Student Chapter
-            </h1>
-          </MotionDiv>
+            <Typewriter text="Anjuman ACM Student Chapter" className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400 justify-center" />
           <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
