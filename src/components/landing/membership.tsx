@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import { CheckCircle } from "lucide-react"
 import { MotionDiv } from "./motion-div"
 
@@ -22,14 +22,6 @@ export default function Membership() {
           className="max-w-4xl mx-auto"
         >
           <Card className="p-8 sm:p-12 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground shadow-2xl">
-            <div className="text-center">
-              <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
-                Become a Part of Our Community
-              </h2>
-              <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/80">
-                Join the Anjuman ACM Student Chapter and unlock a world of opportunities.
-              </p>
-            </div>
             <div className="mt-10 grid sm:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <h3 className="font-headline text-xl font-semibold">Membership Benefits</h3>
@@ -46,7 +38,7 @@ export default function Membership() {
                  <h3 className="font-headline text-xl font-semibold text-center">Ready to Join?</h3>
                  <p className="text-center mt-2 text-primary-foreground/80">Click the button below to start your journey with us.</p>
                  <Button size="lg" className="mt-6 bg-accent text-accent-foreground hover:bg-accent/90" asChild>
-                    <a href="#contact">Join ACM Now</a>
+                    <a href="https://pceacmnagpur.acm.org/" target="_blank" rel="noopener noreferrer">Join ACM Now</a>
                  </Button>
               </div>
             </div>
