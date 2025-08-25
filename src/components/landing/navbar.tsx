@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X, Code2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 const navItems = [
@@ -63,17 +63,21 @@ export default function Navbar() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <div className="p-6">
-                  <div className="flex justify-between items-center mb-6">
-                     <Link href="#" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                        <Code2 className="h-6 w-6 text-primary" />
-                        <span className="font-headline text-lg font-bold">Anjuman ACM</span>
-                      </Link>
-                      <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
-                        <X className="h-6 w-6" />
-                         <span className="sr-only">Close menu</span>
-                      </Button>
-                  </div>
+                <SheetHeader>
+                  <SheetTitle className="p-6">
+                    <div className="flex justify-between items-center">
+                       <Link href="#" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+                          <Code2 className="h-6 w-6 text-primary" />
+                          <span className="font-headline text-lg font-bold">Anjuman ACM</span>
+                        </Link>
+                        <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
+                          <X className="h-6 w-6" />
+                           <span className="sr-only">Close menu</span>
+                        </Button>
+                    </div>
+                  </SheetTitle>
+                </SheetHeader>
+                <div className="p-6 pt-0">
                   <nav className="flex flex-col gap-4">
                     <NavLinks />
                   </nav>
