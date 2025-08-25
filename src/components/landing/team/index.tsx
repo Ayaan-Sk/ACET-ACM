@@ -45,7 +45,7 @@ export default function Team() {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="flex items-center gap-6 p-4 rounded-lg transition-colors hover:bg-primary/5">
+                <div className="flex items-center gap-6 p-4 rounded-lg transition-all duration-300 hover:bg-primary/5 hover:shadow-lg hover:-translate-y-1">
                   <Avatar className="h-24 w-24 border-2 border-primary/20">
                     <AvatarImage src={`https://placehold.co/100x100.png`} data-ai-hint="professional portrait" />
                     <AvatarFallback>{member.name.split(" ").map(n => n[0]).join("")}</AvatarFallback>
