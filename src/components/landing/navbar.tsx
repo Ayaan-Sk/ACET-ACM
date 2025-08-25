@@ -58,6 +58,7 @@ export default function Navbar() {
           <NavLinks />
         </nav>
         <div className="flex items-center gap-2">
+           <Image src="https://1000logos.net/wp-content/uploads/2021/04/ACM-logo-500x313.png" alt="ACM Logo" width={60} height={40} className="hidden md:block h-10 w-auto" />
           <ThemeToggle />
           <div className="md:hidden">
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
