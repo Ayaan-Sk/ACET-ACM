@@ -22,8 +22,17 @@ export default function Membership() {
           className="max-w-4xl mx-auto"
         >
           <Card className="p-8 sm:p-12 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground shadow-2xl">
-            <div className="mt-10 grid sm:grid-cols-2 gap-8">
+            <div className="grid sm:grid-cols-2 gap-8">
               <div className="space-y-4">
+                <h3 className="font-headline text-3xl font-bold">Join the Community</h3>
+                <p className="text-primary-foreground/80">
+                  Become a member of the Anjuman College of Engineering & Technology ACM Student Chapter and unlock a world of opportunities.
+                </p>
+                 <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" asChild>
+                    <a href="https://pceacmnagpur.acm.org/" target="_blank" rel="noopener noreferrer">Join ACM Now</a>
+                 </Button>
+              </div>
+               <div className="space-y-4">
                 <h3 className="font-headline text-xl font-semibold">Membership Benefits</h3>
                 <ul className="space-y-2">
                   {benefits.map((benefit) => (
@@ -33,13 +42,6 @@ export default function Membership() {
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-primary-foreground/10 rounded-lg p-8">
-                 <h3 className="font-headline text-xl font-semibold text-center">Ready to Join?</h3>
-                 <p className="text-center mt-2 text-primary-foreground/80">Click the button below to start your journey with us.</p>
-                 <Button size="lg" className="mt-6 bg-accent text-accent-foreground hover:bg-accent/90" asChild>
-                    <a href="https://pceacmnagpur.acm.org/" target="_blank" rel="noopener noreferrer">Join ACM Now</a>
-                 </Button>
               </div>
             </div>
           </Card>
