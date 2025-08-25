@@ -5,7 +5,6 @@ import Events from '@/components/landing/events';
 import Team from '@/components/landing/team';
 import Gallery from '@/components/landing/gallery';
 import Resources from '@/components/landing/resources';
-import Membership from '@/components/landing/membership';
 import Contact from '@/components/landing/contact';
 import Footer from '@/components/landing/footer';
 
@@ -20,7 +19,6 @@ export default function Home() {
         <Team />
         <Gallery />
         <Resources />
-        <Membership />
         <Contact />
       </main>
       <Footer />
