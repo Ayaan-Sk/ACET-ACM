@@ -4,16 +4,16 @@ import { MotionDiv } from "./motion-div"
 
 export default function About() {
   return (
-    <section id="about" className="py-16 sm:py-24 bg-secondary/50">
+    <section id="about" className="py-20 sm:py-28 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           <MotionDiv
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Card className="overflow-hidden shadow-lg">
+            <Card className="overflow-hidden shadow-lg rounded-xl">
               <Image
                 src="https://placehold.co/600x400.png"
                 alt="ACM team working together"

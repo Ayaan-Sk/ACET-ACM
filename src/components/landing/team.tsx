@@ -18,7 +18,7 @@ const students = [
 
 export default function Team() {
   return (
-    <section id="team" className="py-16 sm:py-24 bg-secondary/50">
+    <section id="team" className="py-20 sm:py-28 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
@@ -35,9 +35,9 @@ export default function Team() {
           </p>
         </MotionDiv>
 
-        <div className="mt-12">
-          <h3 className="font-headline text-2xl font-bold text-center text-primary mb-8">Faculty Advisors</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="mt-16">
+          <h3 className="font-headline text-2xl font-bold text-center text-primary mb-10">Faculty Advisors</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-4xl mx-auto">
             {faculty.map((member, index) => (
               <MotionDiv
                 key={member.name}
@@ -46,13 +46,13 @@ export default function Team() {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="flex items-center gap-4">
-                  <Avatar className="h-20 w-20">
+                <div className="flex items-center gap-6">
+                  <Avatar className="h-24 w-24">
                     <AvatarImage src={`https://placehold.co/100x100.png`} data-ai-hint="professional portrait" />
                     <AvatarFallback>{member.name.split(" ").map(n => n[0]).join("")}</AvatarFallback>
                   </Avatar>
                   <div>
-                    <h4 className="text-lg font-bold">{member.name}</h4>
+                    <h4 className="text-xl font-bold">{member.name}</h4>
                     <p className="text-muted-foreground">{member.role}</p>
                   </div>
                 </div>
@@ -61,9 +61,9 @@ export default function Team() {
           </div>
         </div>
 
-        <div className="mt-16">
-          <h3 className="font-headline text-2xl font-bold text-center text-primary mb-8">Core Members</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="mt-20">
+          <h3 className="font-headline text-2xl font-bold text-center text-primary mb-10">Core Members</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-12">
             {students.map((member, index) => (
               <MotionDiv
                 key={member.name}
@@ -73,11 +73,11 @@ export default function Team() {
                 transition={{ duration: 0.5, delay: index * 0.05 }}
               >
                 <div className="text-center">
-                  <Avatar className="h-24 w-24 mx-auto">
+                  <Avatar className="h-28 w-28 mx-auto shadow-md">
                     <AvatarImage src={`https://placehold.co/100x100.png`} data-ai-hint="student portrait" />
                     <AvatarFallback>{member.initial}</AvatarFallback>
                   </Avatar>
-                  <h4 className="mt-4 font-semibold">{member.name}</h4>
+                  <h4 className="mt-4 font-bold text-lg">{member.name}</h4>
                   <p className="text-sm text-muted-foreground">{member.role}</p>
                 </div>
               </MotionDiv>
