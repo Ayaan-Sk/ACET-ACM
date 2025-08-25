@@ -4,7 +4,6 @@ import About from '@/components/landing/about';
 import Events from '@/components/landing/events';
 import Team from '@/components/landing/team';
 import Gallery from '@/components/landing/gallery';
-import Membership from '@/components/landing/membership';
 import Resources from '@/components/landing/resources';
 import Contact from '@/components/landing/contact';
 import Footer from '@/components/landing/footer';
@@ -19,7 +18,6 @@ export default function Home() {
         <Events />
         <Team />
         <Gallery />
-        <Membership />
         <Resources />
         <Contact />
       </main>
