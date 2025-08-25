@@ -13,7 +13,7 @@ const galleryImages = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-16 sm:py-24">
+    <section id="gallery" className="py-16 sm:py-24 bg-secondary/20">
       <div className="container mx-auto px-4 md:px-6">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
@@ -39,14 +39,14 @@ export default function Gallery() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="mb-4 break-inside-avoid"
             >
-              <Card className="overflow-hidden group">
+              <Card className="overflow-hidden group rounded-xl border border-primary/10 transition-all duration-300 hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/10">
                 <Image
                   src={image.src}
                   alt={image.alt}
                   data-ai-hint={image.aiHint}
                   width={600}
                   height={400}
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </Card>
             </MotionDiv>

@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button"
 import { MotionDiv } from "./motion-div"
+import { ArrowRight } from "lucide-react"
 
 export default function Hero() {
   return (
-    <section id="home" className="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-background">
+    <section id="home" className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5 [mask-image:linear-gradient(to_bottom,transparent,white_5%,white_95%,transparent)]"></div>
+      
       <div className="container relative z-10 px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <MotionDiv
@@ -12,7 +14,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
-            <h1 className="font-headline text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="font-headline text-5xl font-bold tracking-tighter text-foreground sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400">
               Anjuman ACM Student Chapter
             </h1>
           </MotionDiv>
@@ -31,11 +33,14 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }}
             className="mt-10 flex items-center justify-center gap-x-6"
           >
-            <Button asChild size="lg" className="font-semibold">
-              <a href="#about">Learn More</a>
+            <Button asChild size="lg" className="font-semibold shadow-lg shadow-primary/20">
+              <a href="#events">
+                Explore Events
+                <ArrowRight className="ml-2"/>
+              </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="font-semibold">
-              <a href="#contact">Contact Us</a>
+            <Button asChild variant="ghost" size="lg" className="font-semibold">
+              <a href="#about">Learn More</a>
             </Button>
           </MotionDiv>
         </div>

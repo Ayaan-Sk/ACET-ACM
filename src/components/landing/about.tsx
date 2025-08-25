@@ -1,10 +1,11 @@
 import Image from "next/image"
 import { Card } from "@/components/ui/card"
 import { MotionDiv } from "./motion-div"
+import { Check } from "lucide-react"
 
 export default function About() {
   return (
-    <section id="about" className="py-20 sm:py-28 bg-muted/30">
+    <section id="about" className="py-20 sm:py-28">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <MotionDiv
@@ -13,16 +14,19 @@ export default function About() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Card className="overflow-hidden shadow-lg rounded-xl">
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="ACM team working together"
-                data-ai-hint="team collaboration"
-                width={600}
-                height={400}
-                className="w-full h-auto object-cover"
-              />
-            </Card>
+            <div className="relative">
+              <Card className="overflow-hidden shadow-2xl rounded-2xl border border-primary/10">
+                <Image
+                  src="https://placehold.co/600x400.png"
+                  alt="ACM team working together"
+                  data-ai-hint="team collaboration"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </Card>
+              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+            </div>
           </MotionDiv>
           <MotionDiv
             initial={{ opacity: 0, x: 50 }}
@@ -36,14 +40,14 @@ export default function About() {
             <p className="mt-4 text-lg text-muted-foreground">
               Our chapter is dedicated to advancing the art, science, engineering, and application of information technology, serving both professionals and the public.
             </p>
-            <div className="mt-8 space-y-6">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <h3 className="font-headline text-xl font-semibold text-primary">Our Mission</h3>
-                <p className="mt-2 text-muted-foreground">To foster a vibrant community of computer science enthusiasts, promote knowledge sharing, and provide opportunities for professional growth and development through workshops, seminars, and competitions.</p>
+                <p className="mt-2 text-muted-foreground">To foster a vibrant community of computer science enthusiasts and promote knowledge sharing.</p>
               </div>
               <div>
                 <h3 className="font-headline text-xl font-semibold text-primary">Our Vision</h3>
-                <p className="mt-2 text-muted-foreground">To be a leading student chapter that empowers its members to become innovators and leaders in the field of computing, equipped with the skills and ethical grounding to tackle future challenges.</p>
+                <p className="mt-2 text-muted-foreground">To empower members to become innovators and leaders in the field of computing.</p>
               </div>
             </div>
           </MotionDiv>

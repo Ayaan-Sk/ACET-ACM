@@ -1,25 +1,13 @@
 import Image from "next/image"
 import { Mail, Phone } from "lucide-react"
 import { MotionDiv } from "./motion-div"
-import { Card, CardContent } from "../ui/card"
+import { Card } from "../ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-20 sm:py-28 text-white overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <Image 
-          src="https://placehold.co/1920x1080.png" 
-          alt="Abstract background"
-          data-ai-hint="abstract tech background"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
-      </div>
-      
-      <div className="container relative z-10 mx-auto px-4 md:px-6">
+    <section id="contact" className="py-20 sm:py-28 bg-secondary/20">
+      <div className="container mx-auto px-4 md:px-6">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,8 +16,11 @@ export default function Contact() {
           className="text-center mb-12"
         >
           <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Contact Us
+            Get in Touch
           </h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+            Have questions or want to get involved? We'd love to hear from you.
+          </p>
         </MotionDiv>
 
         <MotionDiv
@@ -39,9 +30,9 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-md mx-auto"
         >
-            <Card className="bg-background/70 backdrop-blur-sm border-primary/20 shadow-2xl rounded-2xl overflow-hidden">
+            <Card className="bg-card/50 backdrop-blur-sm border border-primary/10 shadow-2xl shadow-primary/5 rounded-2xl overflow-hidden">
                 <div className="p-8 text-center">
-                    <Avatar className="w-32 h-32 mx-auto mb-6 border-4 border-primary/50 shadow-lg">
+                    <Avatar className="w-32 h-32 mx-auto mb-6 border-4 border-primary/20 shadow-lg">
                         <AvatarImage src="https://placehold.co/128x128.png" alt="Faculty Advisor" data-ai-hint="professional portrait woman" />
                         <AvatarFallback>FA</AvatarFallback>
                     </Avatar>
@@ -49,22 +40,16 @@ export default function Contact() {
                     <p className="text-primary font-semibold">Faculty Sponsor</p>
                     <p className="text-muted-foreground mb-6">ACM Anjuman Chapter</p>
                     
-                    <div className="space-y-3 text-left">
-                        <div className="flex items-center gap-3">
+                    <div className="space-y-3 text-left max-w-xs mx-auto">
+                        <div className="flex items-center gap-3 p-2 rounded-md transition-colors hover:bg-primary/5">
                             <Phone className="w-5 h-5 text-primary" />
                             <a href="tel:+911234567890" className="text-muted-foreground hover:text-primary transition-colors">+91 12345 67890</a>
                         </div>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 p-2 rounded-md transition-colors hover:bg-primary/5">
                             <Mail className="w-5 h-5 text-primary" />
                             <a href="mailto:advisor@anjuman.edu" className="text-muted-foreground hover:text-primary transition-colors">advisor@anjuman.edu</a>
                         </div>
                     </div>
-                </div>
-                <div className="bg-primary/10 p-6 text-center">
-                    <h4 className="font-headline font-semibold text-primary">We Are Here to Help!</h4>
-                    <p className="text-muted-foreground text-sm mt-1">
-                        Feel free to reach out for any inquiries or support. We're always ready to assist you!
-                    </p>
                 </div>
             </Card>
         </MotionDiv>

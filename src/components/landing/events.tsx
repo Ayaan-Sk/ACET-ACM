@@ -32,7 +32,7 @@ const events = [
 
 export default function Events() {
   return (
-    <section id="events" className="py-16 sm:py-24">
+    <section id="events" className="py-16 sm:py-24 bg-secondary/20">
       <div className="container mx-auto px-4 md:px-6">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +57,7 @@ export default function Events() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 group bg-card/50 hover:bg-card/90 border border-primary/10 hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2">
                 <div className="relative">
                   <Image
                     src={event.image}
@@ -65,9 +65,9 @@ export default function Events() {
                     data-ai-hint={event.aiHint}
                     width={600}
                     height={400}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                   <Badge className="absolute top-2 right-2" variant={event.status === "Upcoming" ? "default" : "secondary"}>
+                   <Badge className="absolute top-4 right-4" variant={event.status === "Upcoming" ? "default" : "secondary"}>
                     {event.status}
                   </Badge>
                 </div>

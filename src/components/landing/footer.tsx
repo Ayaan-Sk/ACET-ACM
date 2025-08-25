@@ -4,7 +4,7 @@ import { FooterWave } from "./wavy-pattern"
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary/50 pt-16">
+    <footer className="bg-secondary/20 pt-16">
       <FooterWave />
       <div className="container mx-auto px-4 md:px-6 pb-8">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">

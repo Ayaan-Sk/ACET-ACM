@@ -1,5 +1,4 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { MotionDiv } from "./motion-div"
 
 const faculty = [
@@ -18,7 +17,7 @@ const students = [
 
 export default function Team() {
   return (
-    <section id="team" className="py-20 sm:py-28 bg-muted/30">
+    <section id="team" className="py-20 sm:py-28">
       <div className="container mx-auto px-4 md:px-6">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
@@ -46,8 +45,8 @@ export default function Team() {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="flex items-center gap-6">
-                  <Avatar className="h-24 w-24">
+                <div className="flex items-center gap-6 p-4 rounded-lg transition-colors hover:bg-primary/5">
+                  <Avatar className="h-24 w-24 border-2 border-primary/20">
                     <AvatarImage src={`https://placehold.co/100x100.png`} data-ai-hint="professional portrait" />
                     <AvatarFallback>{member.name.split(" ").map(n => n[0]).join("")}</AvatarFallback>
                   </Avatar>
@@ -72,8 +71,8 @@ export default function Team() {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
               >
-                <div className="text-center">
-                  <Avatar className="h-28 w-28 mx-auto shadow-md">
+                <div className="text-center group">
+                  <Avatar className="h-28 w-28 mx-auto shadow-md border-2 border-transparent transition-all group-hover:border-primary/50 group-hover:scale-105">
                     <AvatarImage src={`https://placehold.co/100x100.png`} data-ai-hint="student portrait" />
                     <AvatarFallback>{member.initial}</AvatarFallback>
                   </Avatar>
