@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
+import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -46,7 +46,7 @@ export default function Navbar() {
   );
 
   const Logo = () => (
-     <Link href="#" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+     <Link href="#" className="flex items-center gap-2" onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
       <Image src="https://github.com/faskey37/college-website/blob/main/R.jpg?raw=true" alt="Anjuman ACM Logo" width={32} height={32} className="h-8 w-8 rounded-full" />
       <span className="font-headline text-lg font-bold">Anjuman ACM</span>
     </Link>
