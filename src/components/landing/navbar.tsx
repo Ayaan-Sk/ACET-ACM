@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Code2 } from "lucide-react"
+import Image from "next/image"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -42,13 +43,17 @@ export default function Navbar() {
     </>
   );
 
+  const Logo = () => (
+     <Link href="#" className="flex items-center gap-2">
+      <Image src="https://github.com/faskey37/college-website/blob/main/R.jpg?raw=true" alt="Anjuman ACM Logo" width={32} height={32} className="h-8 w-8 rounded-full" />
+      <span className="font-headline text-lg font-bold">Anjuman ACM</span>
+    </Link>
+  )
+
   return (
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? "border-b bg-background/80 backdrop-blur-sm" : ""}`}>
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="#" className="flex items-center gap-2">
-          <Code2 className="h-6 w-6 text-primary" />
-          <span className="font-headline text-lg font-bold">Anjuman ACM</span>
-        </Link>
+        <Logo />
         <nav className="hidden md:flex items-center gap-6">
           <NavLinks />
         </nav>
@@ -66,10 +71,9 @@ export default function Navbar() {
                 <SheetHeader>
                   <SheetTitle className="p-6">
                     <div className="flex justify-between items-center">
-                       <Link href="#" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                          <Code2 className="h-6 w-6 text-primary" />
-                          <span className="font-headline text-lg font-bold">Anjuman ACM</span>
-                        </Link>
+                       <div onClick={() => setMobileMenuOpen(false)}>
+                          <Logo/>
+                       </div>
                         <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
                           <X className="h-6 w-6" />
                            <span className="sr-only">Close menu</span>

@@ -1,43 +1,26 @@
 import Link from "next/link"
-import { Code2, Github, Linkedin, Twitter } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
     <footer className="bg-secondary/50 border-t">
       <div className="container mx-auto px-4 md:px-6 py-8">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="space-y-2">
-            <Link href="#" className="flex items-center gap-2">
-              <Code2 className="h-6 w-6 text-primary" />
-              <span className="font-headline text-lg font-bold">Anjuman ACM</span>
-            </Link>
-            <p className="text-sm text-muted-foreground">Advancing computing as a science & profession.</p>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-2">Quick Links</h4>
-            <ul className="space-y-1">
-              <li><a href="#about" className="text-sm text-muted-foreground hover:text-primary">About Us</a></li>
-              <li><a href="#events" className="text-sm text-muted-foreground hover:text-primary">Events</a></li>
-              <li><a href="#team" className="text-sm text-muted-foreground hover:text-primary">Team</a></li>
-              <li><a href="#contact" className="text-sm text-muted-foreground hover:text-primary">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-2">Connect</h4>
-            <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-primary"><Twitter size={20}/></a>
-              <a href="#" className="text-muted-foreground hover:text-primary"><Github size={20}/></a>
-              <a href="#" className="text-muted-foreground hover:text-primary"><Linkedin size={20}/></a>
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-3">
+             <Image src="https://github.com/faskey37/college-website/blob/main/R.jpg?raw=true" alt="Anjuman ACM Logo" width={40} height={40} className="h-10 w-10 rounded-full" />
+            <div>
+              <p className="font-headline text-lg font-bold">Anjuman ACM Student Chapter</p>
+              <p className="text-sm text-muted-foreground">Advancing Computing as a Science & Profession.</p>
             </div>
-             <div className="mt-4">
+          </div>
+          <div className="text-center sm:text-right">
+             <div className="mb-2">
                 <Link href="/augment" className="text-sm text-muted-foreground hover:text-primary">
-                    Admin
+                    Admin Panel
                 </Link>
              </div>
+             <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Anjuman College ACM. All Rights Reserved.</p>
           </div>
-        </div>
-        <div className="mt-8 border-t pt-4 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Anjuman College ACM Chapter. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
