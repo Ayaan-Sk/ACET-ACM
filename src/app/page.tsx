@@ -7,6 +7,7 @@ import Gallery from '@/components/landing/gallery';
 import Resources from '@/components/landing/resources';
 import Contact from '@/components/landing/contact';
 import Footer from '@/components/landing/footer';
+import Membership from '@/components/landing/membership';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <About />
         <Events />
+        <Membership />
         <Team />
         <Gallery />
         <Resources />

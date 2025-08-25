@@ -11,6 +11,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 const navItems = [
   { href: "#about", label: "About" },
   { href: "#events", label: "Events" },
+  { href: "#membership", label: "Join Us" },
   { href: "#team", label: "Team" },
   { href: "#gallery", label: "Gallery" },
   { href: "#resources", label: "Resources" },
