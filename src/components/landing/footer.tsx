@@ -1,14 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
-import { WavyPattern } from "./wavy-pattern"
+import { FooterWave } from "./wavy-pattern"
 
 export default function Footer() {
   return (
-    <footer className="relative bg-secondary/50 border-t overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full opacity-10">
-        <WavyPattern />
-      </div>
-      <div className="container relative z-10 mx-auto px-4 md:px-6 py-8">
+    <footer className="bg-secondary/50 pt-16">
+      <FooterWave />
+      <div className="container mx-auto px-4 md:px-6 pb-8">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <Image src="https://github.com/faskey37/college-website/blob/main/R.jpg?raw=true" alt="Anjuman ACM Logo" width={40} height={40} className="h-10 w-10 rounded-full" />
