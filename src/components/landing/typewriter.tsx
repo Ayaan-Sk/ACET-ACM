@@ -17,10 +17,20 @@ export const Typewriter = ({ text, className }: { text: string; className?: stri
     visible: {
       opacity: 1,
       y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
     },
     hidden: {
       opacity: 0,
       y: 20,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
     },
   };
 
@@ -30,6 +40,7 @@ export const Typewriter = ({ text, className }: { text: string; className?: stri
       variants={container}
       initial="hidden"
       animate="visible"
+      transition={{ repeat: Infinity, repeatType: "reverse", duration: 2, delay: 3 }}
       className={className}
     >
       {textArray.map((letter, index) => (
