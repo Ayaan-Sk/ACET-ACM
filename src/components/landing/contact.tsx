@@ -54,7 +54,17 @@ export default function Contact() {
                 </div>
               </div>
               <div className="mt-6">
-                <Image src="https://placehold.co/600x400.png" data-ai-hint="college campus map" alt="Map" width={600} height={400} className="rounded-md w-full" />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.680500592823!2d79.0837852149348!3d21.16520198592566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0f1b3f1b3f1%3A0x8b3f1b3f1b3f1b3f!2sAnjuman%20College%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1620208343946!5m2!1sen!2sin"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-md"
+                  title="Anjuman College of Engineering Location"
+                ></iframe>
               </div>
             </Card>
              <Card className="p-6">
