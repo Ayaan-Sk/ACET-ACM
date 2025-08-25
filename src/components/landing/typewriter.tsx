@@ -1,9 +1,27 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 
 export const Typewriter = ({ text, className }: { text: string; className?: string }) => {
   const textArray = Array.from(text);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const sequence = async () => {
+      // eslint-disable-next-line no-constant-condition
+      while (true) {
+        await controls.start("visible");
+        // Wait for 3 seconds after the text is visible
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await controls.start("hidden");
+        // Wait for 1 second before starting again
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+      }
+    };
+    sequence();
+  }, [controls]);
+
 
   const container = {
     hidden: { opacity: 0 },
@@ -39,7 +57,7 @@ export const Typewriter = ({ text, className }: { text: string; className?: stri
       style={{ display: "flex", flexWrap: "wrap" }}
       variants={container}
       initial="hidden"
-      animate="visible"
+      animate={controls}
       className={className}
     >
       {textArray.map((letter, index) => (
