@@ -40,7 +40,6 @@ export const Typewriter = ({ text, className }: { text: string; className?: stri
       variants={container}
       initial="hidden"
       animate="visible"
-      transition={{ repeat: Infinity, repeatType: "reverse", duration: 2, delay: 3 }}
       className={className}
     >
       {textArray.map((letter, index) => (
