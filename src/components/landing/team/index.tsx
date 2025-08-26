@@ -2,12 +2,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { MotionDiv } from "@/components/shared/motion-div"
 
 const faculty = [
-  { name: "Dr. A. K. Sharma", role: "Faculty Advisor", image: "/images/faculty-1.jpg" },
-  { name: "Prof. S. B. Patil", role: "Co-Advisor", image: "/images/faculty-2.jpg" },
+  { name: "Prof. Nazish Khan", role: "Faculty Sponsor", image: "/images/faculty-1.jpg" },
+  { name: "Prof. Razzak Sir", role: "Faculty Sponsor", image: "/images/faculty-2.jpg" },
+  { name: "Prof. Samina Maam", role: "ACM Member", image: "/images/faculty-3.jpg" },
 ]
 
 const students = [
-  { name: "Rohan Verma", role: "Chairperson", initial: "RV", image: "/images/student-1.jpg" },
+  { name: "Ayaan Sheikh", role: "Chairperson", initial: "RV", image: "/images/student-1.jpg" },
   { name: "Priya Singh", role: "Vice Chairperson", initial: "PS", image: "/images/student-2.jpg" },
   { name: "Amit Kumar", role: "Secretary", initial: "AK", image: "/images/student-3.jpg" },
   { name: "Sneha Reddy", role: "Treasurer", initial: "SR", image: "/images/student-4.jpg" },
