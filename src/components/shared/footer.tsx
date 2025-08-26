@@ -1,13 +1,14 @@
+
 import Link from "next/link"
 import Image from "next/image"
 import { FooterWave } from "./wavy-pattern"
 import { Github, Linkedin, Twitter } from "lucide-react"
 
 const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#events", label: "Events" },
-  { href: "#team", label: "Team" },
-  { href: "#gallery", label: "Gallery" },
+  { href: "/about", label: "About" },
+  { href: "/events", label: "Events" },
+  { href: "/team", label: "Team" },
+  { href: "/gallery", label: "Gallery" },
 ];
 
 const socialLinks = [
@@ -48,13 +49,13 @@ export default function Footer() {
              <div>
               <h4 className="font-headline font-semibold mb-4 text-foreground">Get Involved</h4>
               <nav className="flex flex-col gap-3">
-                 <Link href="#membership" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                 <Link href="/membership" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     Join Us
                   </Link>
-                  <Link href="#resources" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/resources" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     Resources
                   </Link>
-                   <Link href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                   <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     Contact
                   </Link>
               </nav>

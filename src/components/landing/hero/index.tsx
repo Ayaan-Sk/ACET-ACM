@@ -17,7 +17,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
           >
             <p className="mt-6 text-lg leading-8 text-muted-foreground sm:text-xl max-w-2xl mx-auto">
-              Advancing computing as a science and profession at Anjuman College of Engineering & Technology.
+              Advancing Computing as a Science and Profession at Anjuman College of Engineering & Technology.
             </p>
           </MotionDiv>
           <MotionDiv

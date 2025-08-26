@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from "react"
@@ -9,13 +10,13 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { ThemeToggle } from "@/components/theme-toggle"
 
 const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#events", label: "Events" },
-  { href: "#membership", label: "Join Us" },
-  { href: "#team", label: "Team" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#resources", label: "Resources" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/events", label: "Events" },
+  { href: "/membership", label: "Join Us" },
+  { href: "/team", label: "Team" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/resources", label: "Resources" },
+  { href: "/contact", label: "Contact" },
 ]
 
 export default function Navbar() {
@@ -33,20 +34,20 @@ export default function Navbar() {
   const NavLinks = ({ className }: { className?: string }) => (
     <>
       {navItems.map((item) => (
-        <a
+        <Link
           key={item.href}
           href={item.href}
           onClick={() => setMobileMenuOpen(false)}
           className={className || "text-sm font-medium text-muted-foreground transition-colors hover:text-primary"}
         >
           {item.label}
-        </a>
+        </Link>
       ))}
     </>
   );
 
   const Logo = () => (
-     <Link href="#" className="flex items-center gap-2" onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+     <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
       <Image src="https://github.com/faskey37/college-website/blob/main/R.jpg?raw=true" alt="Anjuman ACM Logo" width={32} height={32} className="h-8 w-8 rounded-full" />
       <span className="font-headline text-lg font-bold">Anjuman ACM</span>
     </Link>
