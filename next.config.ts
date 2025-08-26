@@ -23,6 +23,9 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
+        protocol: 'https'
+      },
+      {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com',
         port: '',
@@ -31,6 +34,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: '1000logos.net',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.istockphoto.com',
         port: '',
         pathname: '/**',
       }
