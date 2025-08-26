@@ -16,7 +16,7 @@ export default function About() {
             <div className="relative">
               <Card className="overflow-hidden shadow-2xl rounded-2xl border border-primary/10">
                 <Image
-                  src="https://placehold.co/600x400.png"
+                  src="/images/about-team.jpg"
                   alt="ACM team working together"
                   data-ai-hint="team collaboration"
                   width={600}

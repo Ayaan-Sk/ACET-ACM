@@ -1,3 +1,4 @@
+
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -20,5 +21,3 @@ export function FooterWave({ className }: { className?: string }) {
     </div>
   );
 }
-
-export { FooterWave as WavyPattern };

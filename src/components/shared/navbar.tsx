@@ -15,7 +15,7 @@ const navItems = [
   { href: "/membership", label: "Join Us" },
   { href: "/team", label: "Team" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/resources", label: "Resources" },
+  { href: "/calendar", label: "Calendar" },
   { href: "/contact", label: "Contact" },
 ]
 

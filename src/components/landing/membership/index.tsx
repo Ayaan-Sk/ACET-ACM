@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import { MotionDiv } from "@/components/shared/motion-div";
+import Image from "next/image";
 
 const benefits = [
   "Access to exclusive workshops and events",
@@ -43,8 +44,8 @@ export default function Membership() {
                 </Button>
               </div>
               <div className="hidden md:block">
-                 <img
-                  src="https://placehold.co/600x600.png"
+                 <Image
+                  src="/images/membership-community.jpg"
                   alt="Students collaborating"
                   data-ai-hint="students community"
                   width={600}

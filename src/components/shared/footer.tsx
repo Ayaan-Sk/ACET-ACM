@@ -52,8 +52,8 @@ export default function Footer() {
                  <Link href="/membership" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     Join Us
                   </Link>
-                  <Link href="/resources" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Resources
+                  <Link href="/calendar" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Calendar
                   </Link>
                    <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     Contact

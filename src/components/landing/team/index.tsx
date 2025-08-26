@@ -2,17 +2,17 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { MotionDiv } from "@/components/shared/motion-div"
 
 const faculty = [
-  { name: "Dr. A. K. Sharma", role: "Faculty Advisor" },
-  { name: "Prof. S. B. Patil", role: "Co-Advisor" },
+  { name: "Dr. A. K. Sharma", role: "Faculty Advisor", image: "/images/faculty-1.jpg" },
+  { name: "Prof. S. B. Patil", role: "Co-Advisor", image: "/images/faculty-2.jpg" },
 ]
 
 const students = [
-  { name: "Rohan Verma", role: "Chairperson", initial: "RV" },
-  { name: "Priya Singh", role: "Vice Chairperson", initial: "PS" },
-  { name: "Amit Kumar", role: "Secretary", initial: "AK" },
-  { name: "Sneha Reddy", role: "Treasurer", initial: "SR" },
-  { name: "Vikram Rathod", role: "Web Master", initial: "VR" },
-  { name: "Anjali Desai", role: "Event Coordinator", initial: "AD" },
+  { name: "Rohan Verma", role: "Chairperson", initial: "RV", image: "/images/student-1.jpg" },
+  { name: "Priya Singh", role: "Vice Chairperson", initial: "PS", image: "/images/student-2.jpg" },
+  { name: "Amit Kumar", role: "Secretary", initial: "AK", image: "/images/student-3.jpg" },
+  { name: "Sneha Reddy", role: "Treasurer", initial: "SR", image: "/images/student-4.jpg" },
+  { name: "Vikram Rathod", role: "Web Master", initial: "VR", image: "/images/student-5.jpg" },
+  { name: "Anjali Desai", role: "Event Coordinator", initial: "AD", image: "/images/student-6.jpg" },
 ]
 
 export default function Team() {
@@ -47,7 +47,7 @@ export default function Team() {
               >
                 <div className="flex items-center gap-6 p-4 rounded-lg transition-all duration-300 hover:bg-primary/5 hover:shadow-lg hover:-translate-y-1">
                   <Avatar className="h-24 w-24 border-2 border-primary/20">
-                    <AvatarImage src={`https://placehold.co/100x100.png`} data-ai-hint="professional portrait" />
+                    <AvatarImage src={member.image} data-ai-hint="professional portrait" />
                     <AvatarFallback>{member.name.split(" ").map(n => n[0]).join("")}</AvatarFallback>
                   </Avatar>
                   <div>
@@ -73,7 +73,7 @@ export default function Team() {
               >
                 <div className="text-center group">
                   <Avatar className="h-28 w-28 mx-auto shadow-md border-2 border-transparent transition-all group-hover:border-primary/50 group-hover:scale-105">
-                    <AvatarImage src={`https://placehold.co/100x100.png`} data-ai-hint="student portrait" />
+                    <AvatarImage src={member.image} data-ai-hint="student portrait" />
                     <AvatarFallback>{member.initial}</AvatarFallback>
                   </Avatar>
                   <h4 className="mt-4 font-bold text-lg">{member.name}</h4>
